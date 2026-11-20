@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="th" data-lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Natthapong Chomchua — Portfolio</title>
+  <meta name="description" content="Portfolio ของ ณัฐพงษ์ ชุ่มเชื้อ (ต้น) — IT graduate, Back-End / Full-Stack Developer และ IT Support · Laravel, ASP.NET Core, SQL Server, PostgreSQL">
+  <meta property="og:title" content="Natthapong Chomchua — Developer Portfolio">
+  <meta property="og:description" content="Back-End / Full-Stack Developer · IT Support · GPA 3.81 First-Class Honors">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/img/capstone-dashboard.webp">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%232f5bea'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' fill='white' text-anchor='middle'%3ENC%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Set language + theme before paint to avoid flicker
+    (function () {
+      var d = document.documentElement, lang = null, theme = null;
+      try {
+        lang = new URLSearchParams(location.search).get('lang') || localStorage.getItem('lang');
+        theme = localStorage.getItem('theme');
+      } catch (e) {}
+      if (lang === 'en' || lang === 'th') { d.setAttribute('data-lang', lang); d.lang = lang; }
+      if (theme === 'dark' || theme === 'light') d.setAttribute('data-theme', theme);
+      d.classList.add('js');
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main"><span data-l="th">ข้ามไปเนื้อหา</span><span data-l="en">Skip to content</span></a>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="Home">
+        <span class="brand-mark">NC</span>
+        <span class="brand-name">Natthapong<span class="dim">.dev</span></span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Main">
+        <a href="#about"><span data-l="th">เกี่ยวกับ</span><span data-l="en">About</span></a>
+        <a href="#skills"><span data-l="th">ทักษะ</span><span data-l="en">Skills</span></a>
+        <a href="#projects"><span data-l="th">ผลงาน</span><span data-l="en">Projects</span></a>
+        <a href="#experience"><span data-l="th">ประสบการณ์</span><span data-l="en">Experience</span></a>
+        <a href="#contact"><span data-l="th">ติดต่อ</span><span data-l="en">Contact</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-toggle" role="group" aria-label="Language">
+          <button type="button" data-set-lang="th">TH</button>
+          <button type="button" data-set-lang="en">EN</button>
+        </div>
+        <button type="button" class="icon-btn" id="themeBtn" aria-label="Toggle dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.2M12 19.8V22M4.9 4.9l1.6 1.6M17.5 17.5l1.6 1.6M2 12h2.2M19.8 12H22M4.9 19.1l1.6-1.6M17.5 6.5l1.6-1.6"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 14.4A8.5 8.5 0 0 1 9.6 3.5a8.5 8.5 0 1 0 10.9 10.9Z"/></svg>
+        </button>
+        <button type="button" class="icon-btn menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div class="hero-text">
+          <p class="status"><span class="dot"></span><span data-l="th">พร้อมเริ่มงานทันที · กรุงเทพฯ</span><span data-l="en">Available now · Bangkok, Thailand</span></p>
+          <p class="mono hello">&gt; hello, world_</p>
+          <h1>
+            <span data-l="th">ณัฐพงษ์ ชุ่มเชื้อ <span class="nick">(ต้น)</span></span>
+            <span data-l="en">Natthapong Chomchua <span class="nick">(Ton)</span></span>
+          </h1>
+          <p class="role">Back-End / Full-Stack Developer <span class="sep">·</span> IT Support</p>
+          <p class="lead">
+            <span data-l="th">บัณฑิตสาย IT เกียรตินิยมอันดับ 1 ที่ชอบสร้างระบบให้ใช้งานได้จริงตั้งแต่ฐานข้อมูลจนถึงหน้าจอ เคยพัฒนา REST API ด้วย ASP.NET Core ให้โรงพยาบาลรามาธิบดี และพัฒนาเว็บแอประบบจัดส่งสินค้าด้วย Laravel ที่ deploy ใช้งานจริง</span>
+            <span data-l="en">First-class honors IT graduate who builds working systems end to end — from database to UI. Built ASP.NET Core REST APIs as a co-op developer at Ramathibodi Hospital and led development of a production Laravel delivery-management web app.</span>
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#projects"><span data-l="th">ดูผลงาน</span><span data-l="en">View projects</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a class="btn btn-ghost" href="#contact"><span data-l="th">ติดต่อผม</span><span data-l="en">Get in touch</span></a>
+            <a class="btn btn-icon" href="https://github.com/Setokung000" target="_blank" rel="noopener" aria-label="GitHub">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="photo-wrap">
+            <img class="photo" src="assets/img/profile.webp" alt="Natthapong Chomchua" width="400" height="400">
+            <div class="float-card fc-1">
+              <span class="fc-num">3.81</span>
+              <span class="fc-label"><span data-l="th">GPA · เกียรตินิยมอันดับ 1</span><span data-l="en">GPA · First-Class Honors</span></span>
+            </div>
+            <div class="float-card fc-2">
+              <span class="fc-code mono">POST /api/alumni</span>
+              <span class="fc-label"><span data-l="th">สหกิจ · รามาธิบดี</span><span data-l="en">Co-op · Ramathibodi</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- stats strip -->
+      <div class="wrap">
+        <ul class="stats reveal">
+          <li><b>4.84<small>/5</small></b><span data-l="th">คะแนนผู้เชี่ยวชาญ ประเมินโปรเจกต์จบ</span><span data-l="en">Expert rating on capstone</span></li>
+          <li><b>132<small>/134</small></b><span data-l="th">commits ของผมในโปรเจกต์จบ</span><span data-l="en">capstone commits authored by me</span></li>
+          <li><b>15k+</b><span data-l="th">บรรทัด Python ที่เขียนทำ automation</span><span data-l="en">lines of Python automation</span></li>
+          <li><b>6,300+</b><span data-l="th">ผู้เข้าชม mod บน Steam Workshop</span><span data-l="en">Steam Workshop visitors</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="wrap about-grid">
+        <div class="section-head reveal">
+          <p class="eyebrow mono">01 / about</p>
+          <h2><span data-l="th">เกี่ยวกับผม</span><span data-l="en">About me</span></h2>
+        </div>
+        <div class="about-body reveal">
+          <p>
+            <span data-l="th">ผมจบปริญญาตรี สาขาเทคโนโลยีสารสนเทศและธุรกิจดิจิทัล มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ ระหว่างเรียนได้ฝึกงานสหกิจในตำแหน่ง Back-End Developer และเป็นผู้พัฒนาหลักของโปรเจกต์จบที่บริษัทจริงนำไปใช้งาน นอกเวลาผมชอบเขียน Python ทำเครื่องมืออัตโนมัติ และทำ mod เกมที่มีผู้เล่นใช้งานหลายร้อยคน</span>
+            <span data-l="en">I hold a B.B.A. in Information Technology and Digital Business from Rajamangala University of Technology Krungthep. I interned as a Back-End Developer and was the main developer of a capstone web app used by a real business. In my free time I write Python automation tools and build game mods used by hundreds of players.</span>
+          </p>
+          <p>
+            <span data-l="th">ผมกำลังมองหาตำแหน่ง <b>Developer (Back-End / Front-End / Full-Stack)</b> และ <b>IT Support</b> เพราะเชื่อว่าความเข้าใจโครงสร้างระบบและฐานข้อมูลจากสาย Dev ช่วยให้แก้ปัญหาของผู้ใช้ได้ตรงจุดและเร็วขึ้น</span>
+            <span data-l="en">I'm looking for <b>Developer (Back-End / Front-End / Full-Stack)</b> and <b>IT Support</b> roles. Understanding how systems and databases work under the hood helps me solve users' problems faster and at the root.</span>
+          </p>
+          <ul class="traits">
+            <li><span class="t-ico">◎</span><span data-l="th">ละเอียดรอบคอบ ทดสอบก่อนส่งงานเสมอ</span><span data-l="en">Detail-oriented — I test before I ship</span></li>
+            <li><span class="t-ico">⌁</span><span data-l="th">แก้ปัญหาอย่างเป็นระบบ แยกต้นเหตุก่อนลงมือ</span><span data-l="en">Systematic problem solver — isolate the root cause first</span></li>
+            <li><span class="t-ico">✎</span><span data-l="th">จดบันทึกปัญหาและวิธีแก้เป็นเอกสาร</span><span data-l="en">Documents issues and fixes for the team</span></li>
+            <li><span class="t-ico">⏱</span><span data-l="th">ส่งงานก่อนกำหนด รับผิดชอบงานจนจบ</span><span data-l="en">Delivers ahead of deadlines, owns tasks to the end</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section alt" id="skills">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow mono">02 / skills</p>
+          <h2><span data-l="th">ทักษะและเครื่องมือ</span><span data-l="en">Skills &amp; tools</span></h2>
+        </div>
+        <div class="skill-grid">
+          <article class="skill-card reveal">
+            <h3><span class="sk-ico mono">{ }</span>Back-End</h3>
+            <ul class="chips"><li>C#</li><li>ASP.NET Core (.NET 8)</li><li>PHP 8</li><li>Laravel 12</li><li>REST API</li><li>Python</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="sk-ico mono">&lt;/&gt;</span>Front-End</h3>
+            <ul class="chips"><li>HTML</li><li>CSS / SCSS</li><li>JavaScript</li><li>Bootstrap 5</li><li>Tailwind CSS</li><li>Blade</li><li>Vite</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="sk-ico mono">▤</span>Database</h3>
+            <ul class="chips"><li>SQL Server</li><li>PostgreSQL</li><li>Supabase</li><li>MySQL</li><li>ER Diagram</li><li>Migrations</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="sk-ico mono">⚙</span><span data-l="th">เครื่องมือ &amp; Deploy</span><span data-l="en">Tools &amp; Deploy</span></h3>
+            <ul class="chips"><li>Git / GitHub</li><li>Postman</li><li>Swagger</li><li>Visual Studio</li><li>VS Code</li><li>Railway</li><li>XAMPP</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="sk-ico mono">⛨</span>IT Support &amp; Security</h3>
+            <ul class="chips"><li>Cybersecurity basics</li><li>Hardware &amp; OS setup</li><li>Troubleshooting</li><li>Technical docs</li><li>MS Office</li></ul>
+          </article>
+          <article class="skill-card reveal">
+            <h3><span class="sk-ico mono">✦</span>AI-assisted Dev</h3>
+            <ul class="chips"><li>Claude</li><li>GitHub Copilot</li><li>ChatGPT</li><li>Gemini</li></ul>
+          </article>
+        </div>
+        <p class="lang-line reveal">
+          <span data-l="th"><b>ภาษา:</b> ไทย (ภาษาแม่) · อังกฤษ (ระดับกลาง อ่าน-เขียน)</span>
+          <span data-l="en"><b>Languages:</b> Thai (native) · English (intermediate reading &amp; writing)</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow mono">03 / projects</p>
+          <h2><span data-l="th">ผลงาน</span><span data-l="en">Selected projects</span></h2>
+        </div>
+
+        <!-- Featured: capstone -->
+        <article class="feature reveal">
+          <div class="feature-head">
+            <div>
+              <p class="tag-row">
+                <span class="tag tag-accent"><span data-l="th">โปรเจกต์จบ</span><span data-l="en">Capstone</span></span>
+                <span class="tag"><span data-l="th">ทีม 3 คน · ผู้พัฒนาหลัก</span><span data-l="en">Team of 3 · Lead developer</span></span>
+                <span class="tag">2025 – 2026</span>
+              </p>
+              <h3 class="feature-title">
+                <span data-l="th">เว็บแอปพลิเคชันจัดการสถานะการส่งสินค้าและคลังสินค้า</span>
+                <span data-l="en">Delivery Status &amp; Inventory Management Web App</span>
+              </h3>
+              <p class="feature-client">
+                <span data-l="th">กรณีศึกษา หจก. จอมทองโลหะภัณฑ์ — ร้านวัสดุก่อสร้างที่มีบริการจัดส่ง</span>
+                <span data-l="en">Case study: Jomthong Lohapun Ltd. Part. — a hardware supplier with its own delivery fleet</span>
+              </p>
+            </div>
+          </div>
+
+          <div class="gallery">
+            <button type="button" class="shot shot-main" data-full="assets/img/capstone-dashboard.webp">
+              <img src="assets/img/capstone-dashboard.webp" alt="Admin dashboard" loading="lazy" width="1024" height="544">
+              <span class="shot-cap"><span data-l="th">Dashboard ผู้ดูแลระบบ + สินค้าขายดี 5 อันดับ</span><span data-l="en">Admin dashboard + top-5 best sellers</span></span>
+            </button>
+            <button type="button" class="shot" data-full="assets/img/capstone-tracking.webp">
+              <img src="assets/img/capstone-tracking.webp" alt="Order tracking" loading="lazy" width="1024" height="550">
+              <span class="shot-cap"><span data-l="th">ลูกค้าติดตามสถานะด้วยเลขบิล</span><span data-l="en">Customer tracking by bill ID</span></span>
+            </button>
+            <button type="button" class="shot" data-full="assets/img/capstone-orders.webp">
+              <img src="assets/img/capstone-orders.webp" alt="Order management" loading="lazy" width="1199" height="657">
+              <span class="shot-cap"><span data-l="th">จัดการคำสั่งซื้อ</span><span data-l="en">Order management</span></span>
+            </button>
+            <button type="button" class="shot" data-full="assets/img/capstone-stock.webp">
+              <img src="assets/img/capstone-stock.webp" alt="Stock management" loading="lazy" width="1199" height="664">
+              <span class="shot-cap"><span data-l="th">จัดการสต็อกสินค้า</span><span data-l="en">Stock management</span></span>
+            </button>
+            <button type="button" class="shot" data-full="assets/img/capstone-order-detail.webp">
+              <img src="assets/img/capstone-order-detail.webp" alt="Order detail with status timeline" loading="lazy" width="1199" height="556">
+              <span class="shot-cap"><span data-l="th">รายละเอียดและ timeline การจัดส่ง</span><span data-l="en">Order detail &amp; status timeline</span></span>
+            </button>
+          </div>
+
+          <div class="case">
+            <div class="case-col">
+              <h4><span data-l="th">ปัญหา</span><span data-l="en">Problem</span></h4>
+              <p>
+                <span data-l="th">ลูกค้าต้องโทรถามสถานะการส่งของเอง และพนักงานต้องนับสต็อกด้วยมือทุกเดือน ทำให้เสียเวลาและข้อมูลคลาดเคลื่อน</span>
+                <span data-l="en">Customers had to call to ask where their delivery was, and staff counted stock by hand every month — slow and error-prone.</span>
+              </p>
+              <h4><span data-l="th">สิ่งที่ผมทำ</span><span data-l="en">What I did</span></h4>
+              <p>
+                <span data-l="th">ออกแบบฐานข้อมูล (49 migrations, 16 models) พัฒนาทั้ง back-end และ front-end วางระบบสิทธิ์ผู้ใช้ และ deploy ขึ้น cloud ด้วยตัวเอง</span>
+                <span data-l="en">Designed the database (49 migrations, 16 models), built both back-end and front-end, implemented role-based access, and deployed it to the cloud myself.</span>
+              </p>
+            </div>
+            <div class="case-col">
+              <h4><span data-l="th">ฟีเจอร์หลัก</span><span data-l="en">Key features</span></h4>
+              <ul class="ticks">
+                <li><span data-l="th">ระบบสิทธิ์ 5 บทบาท: Admin, Office, Picker, Courier, Customer</span><span data-l="en">Role-based access for 5 roles: Admin, Office, Picker, Courier, Customer</span></li>
+                <li><span data-l="th">Timeline สถานะคำสั่งซื้อ ลูกค้าติดตามด้วยเลขบิลได้เอง</span><span data-l="en">Order status timeline with public tracking by bill ID</span></li>
+                <li><span data-l="th">แผนที่จุดส่ง + แนบรูปหลักฐานการจัดส่ง</span><span data-l="en">Delivery map + proof-of-delivery photo upload</span></li>
+                <li><span data-l="th">บันทึกสต็อกเข้า-ออก + แจ้งเตือนสินค้าใกล้หมด</span><span data-l="en">Stock movement ledger + low-stock alerts</span></li>
+                <li><span data-l="th">รายงาน PDF, อันดับสินค้าขายดีรายเดือน</span><span data-l="en">PDF reports and monthly best-seller ranking</span></li>
+                <li><span data-l="th">ยืนยันอีเมล รีเซ็ตรหัสผ่าน ลิงก์เชิญพนักงาน และ Audit log</span><span data-l="en">Email verification, password reset, staff invitations, audit log</span></li>
+              </ul>
+            </div>
+            <div class="case-col">
+              <h4><span data-l="th">ผลลัพธ์</span><span data-l="en">Results</span></h4>
+              <div class="metric-row">
+                <div class="metric"><b>4.84<small>/5</small></b><span data-l="th">ผู้เชี่ยวชาญ 5 ท่าน</span><span data-l="en">5 expert reviewers</span></div>
+                <div class="metric"><b>4.70<small>/5</small></b><span data-l="th">ผู้ใช้จริง 30 คน</span><span data-l="en">30 real users</span></div>
+              </div>
+              <h4>Tech stack</h4>
+              <ul class="chips small"><li>Laravel 12</li><li>PHP 8.2</li><li>PostgreSQL (Supabase)</li><li>Bootstrap 5</li><li>Tailwind 4</li><li>Vite</li><li>Railway</li></ul>
+              <p class="note">
+                <span data-l="th">ซอร์สโค้ดเป็น private repo ขอดูหรือ demo ได้ตอนสัมภาษณ์</span>
+                <span data-l="en">Source is in a private repo — happy to walk through it or demo in an interview.</span>
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Side projects -->
+        <div class="side-grid">
+          <article class="card reveal">
+            <p class="tag-row"><span class="tag">Python</span><span class="tag">Automation</span><span class="tag"><span data-l="th">โปรเจกต์ส่วนตัว</span><span data-l="en">Personal</span></span></p>
+            <h3>
+              <span data-l="th">Game Mod + ชุดเครื่องมือ Python อัตโนมัติ</span>
+              <span data-l="en">Game Mod + Python Automation Toolkit</span>
+            </h3>
+            <p>
+              <span data-l="th">Mod ขยายเนื้อหาสำหรับเกมวางแผนแนวประวัติศาสตร์ทางเลือก (Hearts of Iron IV) ข้อมูลเกมมีหลายพันไฟล์ ผมจึงเขียน Python มาตรวจสอบ แก้ไข และสร้างเนื้อหาอัตโนมัติ แทนการแก้ทีละไฟล์ด้วยมือ</span>
+              <span data-l="en">A content-expansion mod for an alternate-history strategy game (Hearts of Iron IV). The game data spans thousands of files, so I wrote Python tools to validate, fix and generate content automatically instead of editing by hand.</span>
+            </p>
+            <div class="code-block mono" aria-label="tools overview">
+              <div><span class="c-dim">tools/</span></div>
+              <div>├─ <span class="c-acc">audit_*.py</span>  <span class="c-dim"># <span data-l="th">หา reference ที่หาย, key ซ้ำ</span><span data-l="en">find broken refs, duplicate keys</span></span></div>
+              <div>├─ <span class="c-acc">build_*.py</span>  <span class="c-dim"># <span data-l="th">สร้างเนื้อหาจาก spec</span><span data-l="en">generate content from specs</span></span></div>
+              <div>├─ <span class="c-acc">fix_*.py</span>    <span class="c-dim"># <span data-l="th">แก้บั๊กแบบ batch</span><span data-l="en">batch bug fixes</span></span></div>
+              <div>└─ <span class="c-acc">dds / atlas</span> <span class="c-dim"># <span data-l="th">pipeline แปลงรูป</span><span data-l="en">image pipeline</span></span></div>
+            </div>
+            <ul class="mini-stats">
+              <li><b>138</b><span data-l="th">สคริปต์</span><span data-l="en">scripts</span></li>
+              <li><b>15.7k</b><span data-l="th">บรรทัด</span><span data-l="en">lines</span></li>
+              <li><b>5,900+</b><span data-l="th">ผู้เข้าชม</span><span data-l="en">visitors</span></li>
+              <li><b>170</b><span data-l="th">ผู้ติดตั้ง</span><span data-l="en">subscribers</span></li>
+            </ul>
+            <p class="note"><span data-l="th">โค้ดอยู่ใน private repo ขอดูได้ตอนสัมภาษณ์</span><span data-l="en">Code is in a private repo — available on request.</span></p>
+          </article>
+
+          <article class="card reveal">
+            <p class="tag-row"><span class="tag">Localization</span><span class="tag">Fonts</span><span class="tag"><span data-l="th">โปรเจกต์ส่วนตัว</span><span data-l="en">Personal</span></span></p>
+            <h3>
+              <span data-l="th">Mod แปลภาษาไทย</span>
+              <span data-l="en">Thai Localization Mod</span>
+            </h3>
+            <p>
+              <span data-l="th">แปลเนื้อหาในเกมทั้งหมดเป็นภาษาไทยกว่า 1,200 ไฟล์ และแก้ปัญหาที่เกมไม่รองรับตัวอักษรไทย โดยทำ bitmap font ไทยเอง ให้สระและวรรณยุกต์แสดงผลถูกต้อง</span>
+              <span data-l="en">Translated the full game content into Thai across 1,200+ localization files and solved the engine's lack of Thai script support by building custom bitmap fonts so vowels and tone marks render correctly.</span>
+            </p>
+            <div class="code-block mono" aria-label="Thai font fix">
+              <div><span class="c-dim"># <span data-l="th">ก่อน: เกมแสดงอักษรไทยไม่ได้</span><span data-l="en">before: engine can't render Thai</span></span></div>
+              <div>"สวัสดี"  →  <span class="c-err">▯▯▯▯▯▯</span></div>
+              <div><span class="c-dim"># <span data-l="th">หลัง: bitmap font + จัดตำแหน่งสระ/วรรณยุกต์</span><span data-l="en">after: bitmap font + vowel/tone placement</span></span></div>
+              <div>"สวัสดี"  →  <span class="c-ok">สวัสดี ✓</span></div>
+            </div>
+            <ul class="mini-stats">
+              <li><b>1,200+</b><span data-l="th">ไฟล์</span><span data-l="en">files</span></li>
+              <li><b>449</b><span data-l="th">ผู้เข้าชม</span><span data-l="en">visitors</span></li>
+              <li><b>70</b><span data-l="th">ผู้ติดตั้ง</span><span data-l="en">subscribers</span></li>
+            </ul>
+            <a class="link" href="https://steamcommunity.com/sharedfiles/filedetails/?id=3819695035" target="_blank" rel="noopener"><span data-l="th">ดูบน Steam Workshop</span><span data-l="en">View on Steam Workshop</span> ↗</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE & EDUCATION ========== -->
+    <section class="section alt" id="experience">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="eyebrow mono">04 / experience</p>
+          <h2><span data-l="th">ประสบการณ์และการศึกษา</span><span data-l="en">Experience &amp; education</span></h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-date mono"><span data-l="th">9 มิ.ย. – 3 ต.ค. 2568</span><span data-l="en">Jun 9 – Oct 3, 2025</span></div>
+            <div class="tl-body">
+              <h3>Back-End Developer <span class="dim">(Co-op Intern)</span></h3>
+              <p class="tl-org"><span data-l="th">คณะแพทยศาสตร์โรงพยาบาลรามาธิบดี มหาวิทยาลัยมหิดล</span><span data-l="en">Faculty of Medicine Ramathibodi Hospital, Mahidol University</span></p>
+              <p><span data-l="th">ร่วมพัฒนา <b>ระบบลงทะเบียนศิษย์เก่า</b> กับทีมพัฒนาของโรงพยาบาล</span><span data-l="en">Built the back-end of the <b>Alumni Registration System</b> with the hospital's dev team.</span></p>
+              <ul class="ticks">
+                <li><span data-l="th">พัฒนา RESTful API ด้วย C# / ASP.NET Core ให้ Front-End แสดง ค้นหา เพิ่ม แก้ไข และลบข้อมูลได้ (CRUD)</span><span data-l="en">Developed RESTful APIs in C# / ASP.NET Core for full CRUD and search from the front-end</span></li>
+                <li><span data-l="th">ออกแบบโครงสร้างฐานข้อมูลบน SQL Server และวาด Diagram ความสัมพันธ์ระหว่างตาราง</span><span data-l="en">Designed the SQL Server schema and table-relationship diagrams</span></li>
+                <li><span data-l="th">ทดสอบ API ทุก endpoint ด้วย Swagger และ Postman</span><span data-l="en">Tested every endpoint with Swagger and Postman</span></li>
+                <li><span data-l="th">จัดทำเอกสารทางเทคนิคและ System Architecture Diagram</span><span data-l="en">Wrote technical documentation and system architecture diagrams</span></li>
+              </ul>
+              <ul class="chips small"><li>C#</li><li>ASP.NET Core (.NET 8)</li><li>SQL Server</li><li>Swagger</li><li>Postman</li></ul>
+            </div>
+          </li>
+          <li class="tl-item reveal">
+            <div class="tl-date mono"><span data-l="th">ปีการศึกษา 2565 – 2568</span><span data-l="en">2022 – 2025 (academic yrs)</span></div>
+            <div class="tl-body">
+              <h3><span data-l="th">ปริญญาตรี บริหารธุรกิจบัณฑิต</span><span data-l="en">Bachelor of Business Administration</span></h3>
+              <p class="tl-org"><span data-l="th">มหาวิทยาลัยเทคโนโลยีราชมงคลกรุงเทพ · สาขาเทคโนโลยีสารสนเทศและธุรกิจดิจิทัล</span><span data-l="en">Rajamangala University of Technology Krungthep · Information Technology &amp; Digital Business</span></p>
+              <p class="honor"><b>GPA 3.81</b> · <span data-l="th">เกียรตินิยมอันดับ 1</span><span data-l="en">First-Class Honors</span></p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section contact" id="contact">
+      <div class="wrap">
+        <div class="contact-card reveal">
+          <p class="eyebrow mono">05 / contact</p>
+          <h2><span data-l="th">มาคุยกันครับ</span><span data-l="en">Let's talk</span></h2>
+          <p class="lead">
+            <span data-l="th">ยินดีรับสัมภาษณ์ทั้งตำแหน่ง Developer และ IT Support เริ่มงานได้ทันที</span>
+            <span data-l="en">Open to Developer and IT Support roles — available to start immediately.</span>
+          </p>
+          <div class="contact-list">
+            <a class="contact-item" href="mailto:natthapong.chomchua@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              <span>natthapong.chomchua@gmail.com</span>
+            </a>
+            <button type="button" class="copy-btn" data-copy="natthapong.chomchua@gmail.com"><span data-l="th">คัดลอก</span><span data-l="en">Copy</span></button>
+            <a class="contact-item" href="tel:+66927099929">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+              <span>092-709-9929</span>
+            </a>
+            <a class="contact-item" href="https://github.com/Setokung000" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="fill"><path d="M12 .5A11.5 11.5 0 0 0 8.4 23c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              <span>github.com/Setokung000</span>
+            </a>
+            <div class="contact-item static">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-12a7 7 0 0 1 14 0c0 5.8-7 12-7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>
+              <span data-l="th">จอมทอง กรุงเทพฯ</span><span data-l="en">Chom Thong, Bangkok</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <p>© 2026 Natthapong Chomchua</p>
+      <p class="mono dim"><span data-l="th">เขียนด้วย HTML · CSS · JavaScript</span><span data-l="en">Hand-built with HTML · CSS · JavaScript</span></p>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <dialog class="lightbox" id="lightbox" aria-label="Screenshot preview">
+    <button type="button" class="lb-close" aria-label="Close">✕</button>
+    <img alt="" id="lightboxImg">
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
