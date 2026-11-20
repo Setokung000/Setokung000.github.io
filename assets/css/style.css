@@ -187,11 +187,11 @@ html[data-lang="en"] .lang-toggle [data-set-lang="en"] { background: var(--ink);
 .hero-visual { display: flex; justify-content: center; }
 .photo-wrap { position: relative; width: min(340px, 78vw); aspect-ratio: 1; }
 .photo-wrap::before {
-  content: ""; position: absolute; inset: -14px; border-radius: 32px;
+  content: ""; position: absolute; inset: -14px; border-radius: 50%;
   border: 1px dashed color-mix(in srgb, var(--accent) 50%, transparent);
-  transform: rotate(-4deg);
+  transform: none;
 }
-.photo { width: 100%; height: 100%; object-fit: cover; border-radius: 28px; position: relative; box-shadow: var(--shadow); }
+.photo { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; position: relative; box-shadow: var(--shadow); }
 .float-card {
   position: absolute; display: flex; flex-direction: column; gap: 2px;
   background: var(--surface); border: 1px solid var(--line); border-radius: 14px;
